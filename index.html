@@ -2,9 +2,12 @@
 <html>
 <head><title>Redirecting…</title></head>
 <body>
+<p>Tap below to return to the app.</p>
+<a id="return-link" href="#" style="font-size:1.5em;">Return to Nonce</a>
 <script>
-  window.location.replace("nonce://oauth/linkedin" + window.location.search);
+  var target = "nonce://oauth/linkedin" + window.location.search;
+  document.getElementById('return-link').href = target;
+  window.location.replace(target);
 </script>
-<p>Redirecting back to the app…</p>
 </body>
 </html>
